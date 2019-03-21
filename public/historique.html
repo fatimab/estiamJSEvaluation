@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Recipe</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="assets/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="ui inverted vertical masthead center aligned segment">
+
+                <div class="ui container">
+                  <div class="ui large secondary inverted pointing menu">
+                    <a class="toc item">
+                      <i class="sidebar icon"></i>
+                    </a>
+                    <a class=" item" href="index.html">Home</a>
+                    <a class="active item" href="historique.html">Historique</a>
+                    <div class="right item">
+                      <a class="ui inverted button">Follow us on <i class="twitter icon"></i></a>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="ui text container">
+                  <h1 class="ui inverted header">
+                    Qualité de l'air et météo par ville
+                  </h1>
+                  
+              </div>
+        </header>
+        <main>
+                <div class="ui container">
+                    <section>
+                        <div class="ui segment" id="historique">
+                        </div>
+                    </section>
+                </div>
+        </main>
+
+        <script type="text/javascript">
+            monstockage = localStorage;
+            for (let a in localStorage) {
+                let p = document.createElement('p');
+                p.innerHTML = `${localStorage.getItem(a)}`;
+                document.querySelector('#historique').appendChild(p );
+            }
+        </script>
+    </body>
+</html>
